@@ -8,6 +8,7 @@ public class Jogo {
     public static final int JOGADOR_X = 1;
     public static final int JOGADOR_O = -1;
     public static final int LIVRE = 0;
+    public static final int VELHA = 2;
 
     public static int[] realizarjoada(int estado[], int pos, int jogador) {
 
@@ -57,7 +58,13 @@ public class Jogo {
             return estado[2];
         }
 
-        return LIVRE;
+        for (int i = 0; i < estado.length; ++i) {
+            if (estado[i] == LIVRE) {
+                return LIVRE;
+            }
+        }
+
+        return VELHA;
     }
 
     public static ArrayList<Integer> posicoesLivres(int estado[]) {
@@ -91,7 +98,9 @@ public class Jogo {
             for(int i = 0; i < estado.length; ++i) {
                 if (estado[i] == JOGADOR_O) {
                     estado[i] = JOGADOR_X;
-                } //else if (JOGADOR_X == );
+                } else if (estado[i] == JOGADOR_X) {
+                    estado[i] = JOGADOR_O;
+                }
             }
         }
         return estado;
