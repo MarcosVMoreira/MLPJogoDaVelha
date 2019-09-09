@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - JogoVelha",
+            "request": "launch",
+            "mainClass": "JogoVelha",
+            "projectName": "MLPJogoDaVelha"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Dados",
+            "request": "launch",
+            "mainClass": "Dados",
+            "projectName": "MLPJogoDaVelha"
+        }
+    ]
+}
